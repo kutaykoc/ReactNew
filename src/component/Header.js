@@ -18,13 +18,6 @@ const Header=props=>(
                 size={25}
             />
         </TouchableWithoutFeedback >
-        <TouchableNativeFeedback >
-            <Icon
-                name="user"
-                color="white"
-                size={25}
-            />
-        </TouchableNativeFeedback>
         <Image style={styles.logo} source={require('../images/Netflix-logo.png')}/>
         <Icon 
             name="search"
