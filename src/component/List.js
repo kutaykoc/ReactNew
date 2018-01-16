@@ -95,9 +95,9 @@ export default class List extends Component {
   }
   render() {
     return (
-      <View style={{flex:1}}>
+      <View style={[{flex:1}]}>
         <View>
-            <Text>My List</Text>
+            <Text style={styles.text}>My List</Text>
             <FlatList 
             horizontal
             ItemSeparatorComponent={()=><View style={{width:20}}></View>}
@@ -106,7 +106,7 @@ export default class List extends Component {
             />
         </View>
         <View>
-            <Text>For You</Text>
+            <Text style={styles.text}>For You</Text>
             <FlatList 
             horizontal
             ItemSeparatorComponent={()=><View style={{width:20 }}></View>}
@@ -120,20 +120,7 @@ export default class List extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  text: {
+    color:"white"
+  }
 });
