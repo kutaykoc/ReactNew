@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 
-import List from './component/List'
+import List from './component/List' 
 export default class App extends Component {
  
   
