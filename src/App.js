@@ -8,37 +8,51 @@ import {
   StyleSheet,
   Text,
   View,
-  FlatList
+  FlatList,
+  Button
 } from 'react-native';
-
+import SideMenu from 'react-native-side-menu'
 import Slide from './component/Slider'
-import List from './component/List' 
+import List from './component/List'
 import Header from './component/Header'
+import Menu from './component/Menu'
 export default class App extends Component {
-  constructor(props){
+  
+  constructor(props) {
     super(props)
-    this.state={
-        isOpen:false
+    this.state = {
+      isOpen: false
     }
-}
-toggle(){
+  }
+  toggle() {
     this.setState({
-        isOpen:!this.state.isOpen
+      isOpen: !this.state.isOpen
     })
-}
+  }
+  updateMenu(isOpen){
+    this.setState({isOpen})
+  }
   render() {
+    const {navigation}=this.props
     return (
-      <View style={[{flex:1},styles.container]}>
-          <Header/>
+      <View style={styles.container}>
+        <SideMenu
+          menu={<Menu />}
+          isOpen={this.state.isOpen}
+          onChange={(isOpen)=>this.updateMenu(isOpen)}
+        >
+          <Header navigation={navigation} toggle={this.toggle.bind(this)}/>
           <Slide />
-          <List />
+          <List navigation={navigation}  />
+          </SideMenu>
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
-    backgroundColor:"black"
+    backgroundColor: "black",
+    flex:1
   }
 });
+

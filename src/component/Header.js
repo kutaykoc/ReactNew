@@ -9,8 +9,10 @@ import{
 } from 'react-native'
 import { StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome'
-const Header=props=>(
-    <View style={styles.container}>
+
+const Header=(props)=>{
+    return(
+        <View style={styles.container}>
         <TouchableWithoutFeedback onPress={()=>props.toggle()}>
             <Icon 
                 name ="bars"
@@ -19,13 +21,16 @@ const Header=props=>(
             />
         </TouchableWithoutFeedback >
         <Image style={styles.logo} source={require('../images/Netflix-logo.png')}/>
+        <TouchableWithoutFeedback onPress={()=>props.navigation.navigate("Search")}>
         <Icon 
             name="search"
             color="white"
             size={25}
         />
+        </TouchableWithoutFeedback>
     </View>
-)
+    )
+}
 
 const styles=StyleSheet.create({
     container:{

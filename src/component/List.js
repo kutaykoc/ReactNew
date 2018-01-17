@@ -9,46 +9,11 @@ import {
   Text,
   View,
   FlatList,
-  Image
+  Image,
+  ScrollView,
+  TouchableWithoutFeedback
 } from 'react-native';
-
-const shows_first=[
-    {
-        "key":1,
-        "name":"Suits",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/0/2432.jpg"
-     },
-     {
-        "key":2,
-        "name":"Modern Family",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/0/628.jpg"
-     },
-     {
-        "key":3,
-        "name":"The Flash",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/78/195988.jpg"
-     },
-     {
-        "key":4,
-        "name":"Supergirl",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/83/209955.jpg"
-     },
-     {
-        "key":5,
-        "name":"Designated Survivor",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/101/253490.jpg",
-     },
-     {
-        "key":6,
-        "name":"24: Legacy",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/90/225030.jpg"
-     },
-     {
-        "key":7,
-        "name":"Colony",
-        "image":"https://static.tvmaze.com/uploads/images/medium_portrait/91/229234.jpg"
-     }
-]
+import shows_first from '../data.json'
 
 const shows_second=[
     {
@@ -87,15 +52,21 @@ const shows_second=[
         "image":"https://static.tvmaze.com/uploads/images/medium_portrait/101/254425.jpg"
      }
 ]
+
 export default class List extends Component {
+  SayfaGit(item){
+    this.props.navigation.navigate("Details",{item:item})
+  }
   _renderItem(item){
     return(
-        <Image style={{width:120,height:180}} source={{uri:item.image}}/>
+       <TouchableWithoutFeedback onPress={()=>this.SayfaGit(item)}>
+          <Image style={{width:120,height:180}} source={{uri:item.image}}/>
+       </TouchableWithoutFeedback>
     )
   }
   render() {
     return (
-      <View style={[{flex:1}]}>
+      <View style={styles.container}>
         <View>
             <Text style={styles.text}>My List</Text>
             <FlatList 
@@ -120,6 +91,10 @@ export default class List extends Component {
 }
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:"black"
+  },
   text: {
     color:"white"
   }

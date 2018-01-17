@@ -106,7 +106,8 @@ const styles=StyleSheet.create({
         flex:1,
         width:width,
         height:height,
-        backgroundColor:'#191919'
+        backgroundColor:'#191919',
+        
     },
     avatarContainer:{
         flexDirection:'row',
