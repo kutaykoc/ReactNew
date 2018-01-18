@@ -12,10 +12,11 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import IonIcons from 'react-native-vector-icons/Ionicons'
 import TabsEpisodes from './TabsEpisodes'
 import Episodes from './Episodes';
+import TextGradient from 'react-native-linear-gradient'
+
 const { width, height } = Dimensions.get("window")
 class Details extends Component {
     render() {
-        console.log(this.props.navigation.state.params.item)//sayfadan gelen ad
         const { episodes } = this.props.navigation.state.params.item.details
         const { name } = this.props.navigation.state.params.item
         const { thumbnail, cast, description, year, creator, numOfEpisodes, season } = this.props.navigation.state.params.item.details
@@ -46,6 +47,11 @@ class Details extends Component {
                                 />
                             </View>
                         </TouchableWithoutFeedback>
+                    </View>
+                    <View style={styles.nameContainer}>
+                        <TextGradient colors={['transparent','#181818','#181818']}>
+                            <Text style={[styles.text,styles.titleShow]}>{name}</Text>
+                        </TextGradient>
                     </View>
                 </Image>
                 <View style={styles.descrptionContainer}>
@@ -88,7 +94,7 @@ class Details extends Component {
 const styles = StyleSheet.create({
     thumbnail: {
         width: width,
-        height: 300,
+        height: 250,
     },
     container: {
         flex: 1,
@@ -147,8 +153,15 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 5,
         right: 10,
-        
         zIndex: 1
+    },
+    nameContainer:{
+        backgroundColor:"transparent" 
+    },
+    titleShow:{
+        fontSize:35,
+        paddingLeft:10,
+        paddingBottom:10
     }
 })
 export default Details
