@@ -11,13 +11,14 @@ import Swiper from 'react-native-swiper'
 const {height,width}=Dimensions.get('window')
 
 const Slider=props=>(
-    <View style ={{flex:1}} >
+    <View style ={styles.container} >
         <Image resizeMode="stretch" style={styles.image} source={props.uri}/>
     </View>
 )
 
 const styles={
     container:{
+       
         flex:1,
         justifyContent:'center'
     },

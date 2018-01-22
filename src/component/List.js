@@ -66,7 +66,7 @@ export default class List extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View>
             <Text style={styles.text}>My List</Text>
             <FlatList 
@@ -85,7 +85,7 @@ export default class List extends Component {
             data={shows_second}
             />
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

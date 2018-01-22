@@ -20,6 +20,20 @@ const Header=(props)=>{
                 size={25}
             />
         </TouchableWithoutFeedback >
+        <TouchableWithoutFeedback onPress={()=>props.navigation.navigate("Video")}>
+        <Icon 
+            name="user"
+            color="white"
+            size={25}
+        />
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={()=>props.navigation.navigate("Nothice")}>
+        <Icon 
+            name="500px"
+            color="white"
+            size={25}
+        />
+        </TouchableWithoutFeedback>
         <Image style={styles.logo} source={require('../images/Netflix-logo.png')}/>
         <TouchableWithoutFeedback onPress={()=>props.navigation.navigate("Search")}>
         <Icon 

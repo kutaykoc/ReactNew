@@ -7,7 +7,6 @@ import {
 export default class Trailers extends Component{
 
     render(){
-        
         return(
             <View>
                 <Text>Trailers</Text>
