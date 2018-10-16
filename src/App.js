@@ -44,7 +44,7 @@ export default class App extends Component {
            <Header navigation={navigation} toggle={this.toggle.bind(this)}/>
           <Slide />
           <List navigation={navigation}  />
-          </SideMenu>
+        </SideMenu>
       </View>
     );
   }

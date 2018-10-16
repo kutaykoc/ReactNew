@@ -2,19 +2,18 @@ import React,{Component} from 'react'
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    WebView
 } from 'react-native'
 import VideoPlayer from 'react-native-video-controls'
 class VideoPlayView extends Component{
     render(){
-        return(
-            <View style={styles.container}>
-                <VideoPlayer 
-                    source={{uri:'https://vjs.zencdn.net/v/oceans.mp4'}}
-                    title={this.props.title}
-                    onBack={()=>this.props.navigation.navigate('Home')}
-                />
-            </View>
+        return (
+            <WebView
+              source={{uri: 'https://www.youtube.com/watch?v=j76hKv57CNA'}}
+              style={{flex:1,alignItems: 'center',marginTop: 20}}
+              
+            />
         )
     }
 }
@@ -26,3 +25,13 @@ const styles=StyleSheet.create({
         flex:1
     }
 })
+
+/*
+<VideoPlayer 
+                    source={ require('../videos/video.mp4')/*uri:'https://www.youtube.com/watch?v=1WtL1rNOLcg'*///}
+ //                   title={this.props.title}
+ //                   disableBack={false}
+//                      domStorageEnabled={true}
+ //                   disableVolume={false}
+  //                  onBack={()=>this.props.navigation.navigate('Home')}
+  //              />

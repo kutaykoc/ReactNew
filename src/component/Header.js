@@ -10,7 +10,7 @@ import{
 import { StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-const Header=(props)=>{
+const Header=(props)=>{ 
     return(
         <View style={styles.container}>
         <TouchableWithoutFeedback onPress={()=>props.toggle()}>

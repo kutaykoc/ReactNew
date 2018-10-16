@@ -8,8 +8,7 @@ import Video from './src/component/VideoPlayerView'
 import Nothice from './src/component/Nothice'
 class reactNavigationSample extends Component {
     static navigationOptions = {
-      title: 'Home Screen',
-      
+      title: 'Home Screen'
     };
   
     render(){
