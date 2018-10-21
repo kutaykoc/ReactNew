@@ -4,9 +4,9 @@ bu proje youtube tan bir video serisi takip edilerek yapılmıştır. video link
 
 
 youtube üzerinde paylaştığım videoda telefonumda uygulamanın nasıl çalıştığını görebilirsiniz.
-youtube link: https://www.youtube.com/watch?v=e-AWKqVjjM0
+youtube link: 
 
-
+[![react-native netflix app example](http://img.youtube.com/vi/e-AWKqVjjM0/0.jpg)](http://www.youtube.com/watch?v=e-AWKqVjjM0)
 
 takip ettiğim eğitim serisini izlerseniz daha fazla bilgi öğrenebilirsiniz.
 
